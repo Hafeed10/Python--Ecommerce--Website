@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { defultloop } from '../Data/AntherPageData';
+import { data } from '../Data/AntherPageData';
 
 const AnotherPage = (props) => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
 
     const incrementCount = () => {
         setCount(count + 1);
@@ -20,33 +22,42 @@ const AnotherPage = (props) => {
                 <ul className='flex flex-wrap border border-red-100'>
                     <li className='p-4 flex'>
                         <img src='' alt='' className='w-full h-fit object-cover' />
-                        <p className='text-sm p-4'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aperiam laboriosam eum facere fugit,
-                            suscipit cum dolorem consectetur ab nemo! Repellendus architecto iure eos sint nulla, mollitia adipisci voluptatem iste!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aperiam laboriosam eum facere fugit.
-                        </p>
+                        {defultloop.map((item) => (
+                            <p key={item.id} className='text-sm p-4'>
+                                {item.description}
+                            </p>
+                        ))}
                     </li>
                     <h1 className='text-3xl font-mono font-bold mt-2'>Hafeex</h1>
-                    <li className='flex justify-between w-full mt-4'>
-                        <h1 className='text-lg'>$100</h1>
-                        <h1 className='text-lg'>XXXX</h1>
-                    </li>
+                    {defultloop.map((items) => (
+                        <li key={items.id} className='flex justify-between w-full mt-4' >
+                            <h1 className='text-lg'>{items.price}</h1>
+                            <h1 className='text-lg'>{items.loop_just}</h1>
+                        </li>
+                    ))}
+
                 </ul>
 
                 {/* Second Item */}
                 <ul className='flex w-2/4 border border-red-100'>
                     <li className='p-4 flex flex-col'>
                         <img src='' alt='' className='w-full h-fit object-cover' />
-                        <div className='flex justify-between mt-4'>
-                            <h1 className='text-lg'>$100</h1>
-                            <h1 className='text-lg'>XXXX</h1>
-                        </div>
+                        {defultloop.map((max) => (
+                            <div key={max.id} className='flex justify-between mt-4' >
+                                <h1 className='text-lg'>{max.price}</h1>
+                                <h1 className='text-lg'>{max.loop_just}</h1>
+                            </div>
+                        ))}
                         <div className=''>
                             <h1 className='text-3xl font-mono font-bold mt-2'>Hafeex</h1>
-                            <p className='text-sm mt-2'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum deserunt explicabo ea quo illo sequi nisi architecto ullam? Earum aperiam in recusandae,
-                                ullam similique odio modi opti impedit voluptatibus aut!
-                            </p>
+                            {
+                                data.map((product) => (
+                                    <p key={product.id} className='text-sm mt-2' >
+                                        {product.description}
+                                    </p>
+                                ))
+                            }
+
                         </div>
                         <div className='count flex mt-3 cursor-pointer'>
                             <h1 className='text-lg p-2' onClick={decrementCount}>-</h1>
@@ -64,7 +75,7 @@ const AnotherPage = (props) => {
                     </li>
                 </ul>
             </div>
-        </div>
+        </div >
     );
 };
 
