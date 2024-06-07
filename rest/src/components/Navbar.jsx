@@ -23,8 +23,12 @@ const Navbar = () => {
                         <li className='md:ml-5'>All</li>
                     </Link>
                     <li className='md:ml-5'>Products</li>
-                    <li className='bg-green-100 p-2 rounded-md text-black px-10 hover:bg-green-900 transition-all ease-linear hover:text-white md:ml-5'>Sign in</li>
-                    <li className='bg-green-100 p-2 rounded-md text-black px-10 hover:bg-green-900 transition-all ease-linear hover:text-white md:ml-5'>Login</li>
+                    <Link to='/Signin'>
+                        <li className='bg-green-100 p-2 rounded-md text-black px-10 hover:bg-green-900 transition-all ease-linear hover:text-white md:ml-5'>Sign in</li>
+                    </Link>
+                    <Link to='/Login'>
+                        <li className='bg-green-100 p-2 rounded-md text-black px-10 hover:bg-green-900 transition-all ease-linear hover:text-white md:ml-5'>Login</li>
+                    </Link>
                     <li className='relative md:ml-5'>
                         <Link to="/another">
                             <HiHomeModern size={30} />
@@ -33,7 +37,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-        </div>
+        </div >
     );
 };
 

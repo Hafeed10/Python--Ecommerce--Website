@@ -22,3 +22,5 @@ export const data = [
         imgAlt: 'Product Image'
     }
 ]
+
+

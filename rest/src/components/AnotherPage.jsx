@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { defultloop, data } from '../Data/AntherPageData';
-import Logo from '../assest/images (1).jpg';
+import Logo from '../assest/IMse-Smart.jpg';
 
 const AnotherPage = (props) => {
     const [count, setCount] = useState(1);
@@ -9,7 +9,7 @@ const AnotherPage = (props) => {
         product2: 150,
         product3: 200
     };
-    const [selectedProduct, setSelectedProduct] = useState('product1');
+    const [selectedProduct, setSelectedProduct] = useState('product2');
 
     const incrementCount = () => {
         setCount(count + 1);
@@ -30,7 +30,7 @@ const AnotherPage = (props) => {
                 <li className='flex flex-wrap p-4'>
                     <img src={Logo} alt='Product' className='w-full h-60 object-cover pointer-events-auto' />
                     {defultloop.map((item) => (
-                        <div key={item.id} className='flex md:flex-row'>
+                        <div key={item.id} className='flex items-start md:flex-row'>
                             <p className='text-sm p-4'>
                                 {item.description}
                             </p>

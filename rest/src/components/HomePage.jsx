@@ -27,7 +27,7 @@ const HomePage = () => {
 
     const handleAddToCard = (product) => {
         addToCard(product);
-        // navigate(`/another-page/${product.id}`);
+        // navigate(`/AnotherPage/${product.image}`); // Corrected navigation syntax
     };
 
     return (
