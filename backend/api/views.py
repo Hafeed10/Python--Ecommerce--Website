@@ -1,6 +1,6 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from base.models import Item  # Ensure this path is correct based on your project structure
+from base.models import Item  
 from .serializers import ItemSerializer
 
 @api_view(['GET'])
